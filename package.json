@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/bin/api.js",
     "build": "npx tsc",
-    "dev": "nodemon bin/api.ts"
+    "dev": "nodemon bin/api.ts",
+    "create-database": "npx ts-node bin/create-database.ts"
   },
   "keywords": [],
   "author": "",
