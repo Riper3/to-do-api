@@ -1,5 +1,5 @@
-const getAll = async (req: any, res: any): Promise<any> => {
-    res.status(200).json({response: []});
+const getAllService = async (req: any, res: any): Promise<any> => {
+    return ['To do', 'To do', 'To do'];
 }
 
-export default getAll;
+export default getAllService;
