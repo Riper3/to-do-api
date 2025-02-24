@@ -17,9 +17,9 @@ const controllerModel = async (req: any, res: any, service: any) => {
   
       res.status(200).json(response);
   
-    } catch (error) {
+    } catch (error: any) {
       response.response = 'error';
-      response.error = error;
+      response.error = error.message;
   
       res.status(400).json(response);
   
