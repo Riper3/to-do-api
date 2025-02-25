@@ -44,6 +44,8 @@ const createDatabase = async () => {
         password varchar(255),
         created_date date,
         updated_date date,
+        device_id varchar(255),
+        temporal_token varchar(255),
         requests int
     );`);
 
