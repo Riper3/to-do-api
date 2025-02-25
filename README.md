@@ -1,6 +1,6 @@
 # Overview
 
-This is an API builded with TS, Express and Mysql. The goal of the project is to have an API to track daily tasks.
+This is an API built with TS, Express and Mysql. The goal of the project is to have an API to track daily tasks.
 
 # Requirements
 
@@ -29,6 +29,10 @@ npm start
 
 # Serverless framework
 
+The project assumes the database is deployed in an external server, your .env is setup properly and you have a AWS account
+
+npm run build
+
 npm i serverless -g
 
 serverless
@@ -51,11 +55,11 @@ Runs the project with no need of a build
 
 ### npm run create-database
 
-Creates an empty database schema with the sturcture needed for the project, be careful, this script deletes your current datase. The database name would be the one specified on your .env
+Creates an empty database schema with the sturcture needed for the project, be careful, this script deletes your current database. The database name would be the one specified on your .env
 
 # Endpoints
 
-All the endpoints follow this desing, url/api/module/endpoint
+All the endpoints follow this design, url/api/module/endpoint
 
 ### GET api/tasks/get-all
 
@@ -63,7 +67,7 @@ This endpoint returns all your tasks
 
 ### POST api/tasks/insert
 
-This endpoint inserst a new task linked to your user
+This endpoint inserts a new task linked to your user
 
 | Params  | Type |
 | ------------- |:-------------:|
@@ -72,4 +76,12 @@ This endpoint inserst a new task linked to your user
 
 ### PUT api/tasks/update:id
 
-This endpoint update the status of the task, if it is active (1) it will change to 0 and the opposite.
+This endpoint update the status of the task, if it is active (1) it will change to 0 and the opposite
+
+### POST api/auth/new-device
+
+This endpoint returns a token and store in the database from a device id
+
+| Params  | Type |
+| ------------- |:-------------:|
+| device_id      | string     |
