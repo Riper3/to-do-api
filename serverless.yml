@@ -1,0 +1,14 @@
+org: company1212
+app: to-do-api
+service: to-do-api
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: dev
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: "*"

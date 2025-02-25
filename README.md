@@ -27,6 +27,14 @@ npm run create-database
 
 npm start
 
+# Serverless framework
+
+npm i serverless -g
+
+serverless
+
+serverless deploy
+
 # Scripts
 
 ### npm start
