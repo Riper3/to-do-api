@@ -61,9 +61,9 @@ Creates an empty database schema with the sturcture needed for the project, be c
 
 All the endpoints follow this design, url/api/module/endpoint
 
-### GET api/tasks/get-all
+### GET api/tasks/get
 
-This endpoint returns all your tasks
+This endpoint returns all your tasks, if you add a parameter, like task_id, it will only return the rask that meet that criteria
 
 ### POST api/tasks/insert
 

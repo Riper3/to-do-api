@@ -1,4 +1,5 @@
 import query from '../../../utils/query';
+import getService from './get';
 
 const insertService = async (req: any, res: any): Promise<any> => {
     const body = req.body;
@@ -11,7 +12,7 @@ const insertService = async (req: any, res: any): Promise<any> => {
 
     const taskInserted: any = await query(sql, [1, body.name, new Date(body.due_date)]);
 
-    return { "task_id": taskInserted.insertId };
+    return getService({body: {task_id: taskInserted.insertId}});
 }
 
 export default insertService;
